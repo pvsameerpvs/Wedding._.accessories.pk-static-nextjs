@@ -51,9 +51,7 @@ export default function CustomOrdersPage() {
 
          {/* Header */}
          <div className="text-center space-y-6 animate-fadeUp">
-            <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-4">
-               <ArrowLeft className="w-4 h-4" /> Return Home
-            </Link>
+            
             <div className="space-y-4">
                <span className="text-xs font-bold tracking-[0.2em] text-primary uppercase">The Bespoke Studio</span>
                <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-none text-charcoal">

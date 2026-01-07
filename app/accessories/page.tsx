@@ -55,9 +55,7 @@ export default function AccessoriesPage() {
        <div className="container relative z-10 py-12 lg:py-16 space-y-12">
           {/* Header */}
           <div className="text-center space-y-6 animate-fadeUp pt-4">
-             <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-4">
-                <ArrowLeft className="w-4 h-4" /> Return Home
-             </Link>
+           
              
              <div className="space-y-4">
                 <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-none text-charcoal">

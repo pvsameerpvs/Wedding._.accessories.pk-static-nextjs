@@ -9,11 +9,12 @@ const nav = [
   { label: "Accessories", href: "/accessories" },
   { label: "Custom Orders", href: "/custom-orders" },
   { label: "About Us", href: "/about" },
+    { label: "Contact", href: "/contact" },
 ] as const
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-4 z-40 w-full px-4 md:px-6">
+    <header className="fixed top-4 z-40 w-full px-4 md:px-6">
        <div className="mx-auto max-w-7xl rounded-full border border-white/20 bg-white/70 backdrop-blur-xl shadow-lg shadow-black/5 supports-[backdrop-filter]:bg-white/60">
           <div className="container flex h-16 items-center justify-between px-6">
              <div className="flex items-center gap-4">
