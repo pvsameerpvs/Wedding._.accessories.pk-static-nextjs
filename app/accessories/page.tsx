@@ -52,7 +52,7 @@ export default function AccessoriesPage() {
        <div className="fixed top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 z-0" />
        <div className="fixed bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4 z-0" />
 
-       <div className="container relative z-10 py-12 lg:py-16 space-y-12">
+       <div className="container relative z-10 pt-28 md:pt-36 lg:pt-40 pb-12 md:pb-20 space-y-12">
           {/* Header */}
           <div className="text-center space-y-6 animate-fadeUp pt-4">
            

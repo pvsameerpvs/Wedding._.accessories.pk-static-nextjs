@@ -45,7 +45,7 @@ export default function CustomOrdersPage() {
          />
       </div>
 
-      <div className="container relative z-10 py-12 md:py-20 lg:py-24 space-y-20">
+      <div className="container relative z-10 pt-28 md:pt-36 lg:pt-40 pb-12 md:pb-20 space-y-20">
          {/* Decoration */}
          <div className="absolute top-20 right-10 w-64 h-64 bg-primary/10 rounded-full blur-[80px] -z-10 animate-pulse" />
 

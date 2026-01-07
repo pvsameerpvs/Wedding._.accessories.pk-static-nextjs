@@ -23,7 +23,7 @@ export default function ContactPage() {
           />
        </div>
 
-       <div className="container relative z-10 py-12 md:py-20 lg:py-24 max-w-5xl mx-auto space-y-16">
+       <div className="container relative z-10 pt-28 md:pt-36 lg:pt-40 pb-12 md:pb-20 max-w-5xl mx-auto space-y-16">
           {/* Header */}
           <div className="text-center space-y-6 animate-fadeUp">
             
