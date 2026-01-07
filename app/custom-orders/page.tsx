@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { waLink } from "@/lib/whatsapp"
+import { CustomOrderModal } from "@/components/custom-order-modal"
 
 const steps = [
   { 
@@ -94,9 +95,11 @@ export default function CustomOrdersPage() {
                   </div>
 
                   <div className="pt-6">
-                     <Button asChild size="lg" className="rounded-full h-14 px-8 text-base w-full sm:w-auto shadow-xl shadow-primary/20 hover:shadow-2xl hover:translate-y-[-2px] transition-all bg-primary text-primary-foreground">
-                        <a href={href} target="_blank" rel="noreferrer">Start Your Custom Project</a>
-                     </Button>
+                     <CustomOrderModal>
+                        <Button size="lg" className="rounded-full h-14 px-8 text-base w-full sm:w-auto shadow-xl shadow-primary/20 hover:shadow-2xl hover:translate-y-[-2px] transition-all bg-primary text-primary-foreground">
+                           Start Your Custom Project
+                        </Button>
+                     </CustomOrderModal>
                   </div>
                </div>
             </div>
