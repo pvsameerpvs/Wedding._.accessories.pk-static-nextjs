@@ -84,8 +84,8 @@ export default function AboutPage() {
                 </div>
                 <div className="pt-4">
                    <div className="inline-block border-l-2 border-primary pl-6 py-2">
-                      <p className="font-serif text-xl text-charcoal italic">"It's not just about the items; it's about the feeling they create."</p>
-                      <p className="text-sm text-muted-foreground mt-2">— Founder's Note</p>
+                      <p className="font-serif text-xl text-charcoal italic">&quot;It&apos;s not just about the items; it&apos;s about the feeling they create.&quot;</p>
+                      <p className="text-sm text-muted-foreground mt-2">— Founder&apos;s Note</p>
                    </div>
                 </div>
              </div>
@@ -115,7 +115,7 @@ export default function AboutPage() {
           <div className="rounded-[3rem] bg-primary/5 p-12 lg:p-20 text-center space-y-8 relative overflow-hidden">
              <div className="relative z-10 max-w-2xl mx-auto space-y-6">
                 <h2 className="font-serif text-4xl md:text-5xl text-charcoal">Ready to create something beautiful?</h2>
-                <p className="text-lg text-muted-foreground">Let's chat about your upcoming event and how we can add that perfect touch.</p>
+                <p className="text-lg text-muted-foreground">Let&apos;s chat about your upcoming event and how we can add that perfect touch.</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                    <Button asChild size="lg" className="rounded-full px-8 h-12 bg-primary text-white hover:bg-primary/90">
                       <Link href="/custom-orders">Start Custom Project</Link>

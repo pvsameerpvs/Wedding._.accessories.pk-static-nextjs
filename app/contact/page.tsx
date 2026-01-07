@@ -32,10 +32,10 @@ export default function ContactPage() {
              <div className="space-y-4">
                 <span className="text-xs font-bold tracking-[0.2em] text-primary uppercase">Get in Touch</span>
                 <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-none text-charcoal">
-                   Let's start the <br/><span className="italic text-primary">Conversation</span>
+                   Let&apos;s start the <br/><span className="italic text-primary">Conversation</span>
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-                   Whether you have a custom idea or a quick question, we're here to help make your wedding planning effortless.
+                   Whether you have a custom idea or a quick question, we&apos;re here to help make your wedding planning effortless.
                 </p>
              </div>
           </div>
