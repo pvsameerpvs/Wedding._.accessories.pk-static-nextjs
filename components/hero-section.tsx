@@ -1,12 +1,6 @@
-import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { SITE } from "@/lib/site"
-import { waLink } from "@/lib/whatsapp"
-import { ArrowRight, Sparkles } from "lucide-react"
 
 export default function HeroSection() {
-  const waCta = waLink("Hello! I’d like to place an order from Wedding._.accessories.pk. Please share details.")
 
   return (
     <section className="relative min-h-screen w-full bg-background flex items-center justify-center p-4 lg:p-8">
@@ -16,7 +10,7 @@ export default function HeroSection() {
             src="/aesthetic-bg.png" 
             alt="Background Texture" 
             fill 
-            className="object-cover opacity-30 mix-blend-overlay"
+            className="object-cover opacity-60"
             priority
           />
       </div>
