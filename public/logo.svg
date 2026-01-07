@@ -1,0 +1,16 @@
+<svg width="760" height="220" viewBox="0 0 760 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="760" height="220" rx="36" fill="#FFF7EE"/>
+  <g opacity="0.9">
+    <circle cx="120" cy="110" r="72" fill="#F6C1CC"/>
+    <circle cx="160" cy="84" r="40" fill="#F7E7A2"/>
+    <circle cx="160" cy="136" r="40" fill="#7BBF7A" opacity="0.85"/>
+    <path d="M110 110c22-40 52-50 82-44-10 20-26 40-46 54-12 8-24 12-36 12" fill="white" opacity="0.75"/>
+  </g>
+  <g>
+    <text x="240" y="115" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#3A2C27">Wedding._.accessories.pk</text>
+    <text x="240" y="155" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#3A2C27" opacity="0.8">All Wedding Accessories Under One Roof</text>
+  </g>
+  <path d="M40 186c90-30 170-30 260 0" stroke="#F6C1CC" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+  <path d="M300 186c90-30 170-30 260 0" stroke="#F7E7A2" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <path d="M560 186c60-20 110-20 160 0" stroke="#7BBF7A" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+</svg>

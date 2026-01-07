@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 1.1rem;
+
+  --background: 38 100% 97%;
+  --foreground: 14 18% 18%;
+
+  --card: 38 100% 98%;
+  --card-foreground: 14 18% 18%;
+
+  --popover: 38 100% 98%;
+  --popover-foreground: 14 18% 18%;
+
+  --primary: 349 76% 86%;
+  --primary-foreground: 14 18% 18%;
+
+  --secondary: 58 83% 80%;
+  --secondary-foreground: 14 18% 18%;
+
+  --muted: 37 60% 92%;
+  --muted-foreground: 14 12% 34%;
+
+  --accent: 123 31% 60%;
+  --accent-foreground: 14 18% 18%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 20 18% 85%;
+  --input: 20 18% 85%;
+  --ring: 349 76% 70%;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-cream text-charcoal font-sans antialiased;
+  background-image:
+    radial-gradient(900px 260px at 10% 0%, rgba(246, 193, 204, 0.35), transparent 60%),
+    radial-gradient(800px 260px at 90% 10%, rgba(247, 231, 162, 0.35), transparent 60%),
+    radial-gradient(900px 300px at 50% 100%, rgba(123, 191, 122, 0.22), transparent 60%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(246, 193, 204, 0.75);
+}
+
+a { @apply text-charcoal; }
+
+.flower-divider {
+  background-image: radial-gradient(circle at 50% 50%, rgba(246,193,204,0.85), rgba(247,231,162,0.55), rgba(123,191,122,0.35), transparent 70%);
+}
+
+.grid-dots {
+  background-image: radial-gradient(rgba(58, 44, 39, 0.07) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
