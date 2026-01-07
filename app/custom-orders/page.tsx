@@ -121,7 +121,7 @@ export default function CustomOrdersPage() {
                      </div>
                      <div className="pt-4 border-t border-charcoal/10">
                         <p className="text-xs text-charcoal/60 italic">
-                           "If you can dream it, we can design it. Send us your Pinterest board!"
+                           &quot;If you can dream it, we can design it. Send us your Pinterest board!&quot;
                         </p>
                      </div>
                   </CardContent>
