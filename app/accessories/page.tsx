@@ -1,88 +1,105 @@
+"use client"
+
+import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
-import { Separator } from "@/components/ui/separator"
+import { cn } from "@/lib/utils"
 import ProductCard from "@/components/product-card"
 import { allProducts } from "@/lib/products"
 
-const sections = [
-  { id: "nikkah-essentials", title: "Nikkah Essentials", desc: "Signature pieces for your Nikkah day — elegant, floral, and memorable." },
-  { id: "wedding-props-decor", title: "Wedding Props & Decor", desc: "Cute props, boards, and decor for photos and moments." },
-  { id: "ring-ritual-items", title: "Ring & Ritual Items", desc: "Plates, plaques, and ritual items with a premium finish." },
-  { id: "favours-gifts", title: "Favours & Gifts", desc: "Thoughtful giveaways and gift-style favours." },
-  { id: "bridal-accessories", title: "Bridal Accessories", desc: "Bridal accessories that complete the look." },
+const categories = [
+  { id: "all", label: "All Collection" },
+  { id: "nikkah-essentials", label: "Nikkah Essentials" },
+  { id: "wedding-props-decor", label: "Wedding Props" },
+  { id: "ring-ritual-items", label: "Ritual Items" },
+  { id: "favours-gifts", label: "Favours & Gifts" },
+  { id: "bridal-accessories", label: "Bridal Accessories" },
 ] as const
 
-import Image from "next/image"
-
 export default function AccessoriesPage() {
+  const [activeTab, setActiveTab] = useState("all")
+
+  // Filter logic
+  const filteredProducts = activeTab === "all" 
+    ? allProducts 
+    : allProducts.filter(p => {
+        // Match existing category logic
+        const catMap: Record<string, string> = {
+            "nikkah-essentials": "Nikkah Essentials",
+            "wedding-props-decor": "Wedding Props & Decor",
+            "ring-ritual-items": "Ring & Ritual Items",
+            "favours-gifts": "Favours & Gifts",
+            "bridal-accessories": "Bridal Accessories"
+        }
+        return p.category === catMap[activeTab]
+    })
+
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden bg-background">
        {/* Background Decoration */}
-       <div className="fixed inset-0 z-0">
+       <div className="fixed inset-0 z-0 pointer-events-none">
           <Image 
              src="/accessories_bg.png" 
              alt="Background Pattern" 
              fill 
-             className="object-cover opacity-30"
+             className="object-cover opacity-[0.08]" 
              priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/40 to-background/95" />
        </div>
        
-       <div className="fixed top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 z-0" />
-       <div className="fixed bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] translate-y-1/3 -translate-x-1/4 z-0" />
+       <div className="fixed top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 z-0" />
+       <div className="fixed bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4 z-0" />
 
-       <div className="container relative z-10 py-12 md:py-20 lg:py-24 space-y-16">
+       <div className="container relative z-10 py-12 lg:py-16 space-y-12">
           {/* Header */}
-          <div className="space-y-6 animate-fadeUp">
-             <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-charcoal transition-colors">
-                <ArrowLeft className="w-4 h-4" /> Back to Home
+          <div className="text-center space-y-6 animate-fadeUp pt-4">
+             <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-4">
+                <ArrowLeft className="w-4 h-4" /> Return Home
              </Link>
+             
              <div className="space-y-4">
-                <span className="text-xs font-medium tracking-[0.2em] uppercase text-primary">The Collection</span>
-                <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl">
-                   Wedding <span className="italic text-charcoal/80">Essentials</span>
+                <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-none text-charcoal">
+                   The <span className="italic text-primary">Collection</span>
                 </h1>
-                <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
+                <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
                    Explore our curated categories of handcrafted accessories, designed to add elegance to your special moments.
                 </p>
              </div>
           </div>
 
-          {/* Catalog Sections */}
-          <div className="space-y-24">
-            {sections.map((s) => {
-               // Fallback mapping for ids to categories (matching existing logic)
-               const byId = (id: string) => {
-                 if (id === "nikkah-essentials") return "Nikkah Essentials"
-                 if (id === "wedding-props-decor") return "Wedding Props & Decor"
-                 if (id === "ring-ritual-items") return "Ring & Ritual Items"
-                 if (id === "favours-gifts") return "Favours & Gifts"
-                 if (id === "bridal-accessories") return "Bridal Accessories"
-                 return ""
-               }
-               
-               const items = allProducts.filter((p) => p.category === byId(s.id))
-               if (items.length === 0) return null
+          {/* Tab Navigation */}
+          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 animate-fadeUp" style={{ animationDelay: "100ms" }}>
+            {categories.map((cat) => (
+                <button
+                    key={cat.id}
+                    onClick={() => setActiveTab(cat.id)}
+                    className={cn(
+                        "px-6 py-2.5 rounded-full text-sm md:text-base font-medium transition-all duration-300 border",
+                        activeTab === cat.id 
+                            ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20 scale-105" 
+                            : "bg-white/50 text-muted-foreground border-transparent hover:bg-white hover:text-charcoal hover:shadow-sm hover:scale-105"
+                    )}
+                >
+                    {cat.label}
+                </button>
+            ))}
+          </div>
 
-               return (
-                 <section key={s.id} id={s.id} className="scroll-mt-32">
-                   <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-                      <div className="space-y-2">
-                         <h2 className="font-serif text-3xl md:text-4xl text-charcoal">{s.title}</h2>
-                         <p className="text-muted-foreground">{s.desc}</p>
-                      </div>
-                      <Separator className="flex-1 md:w-auto md:max-w-xs bg-charcoal/10" />
-                   </div>
-                   
-                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
-                     {items.map((p) => (
-                       <ProductCard key={p.name} name={p.name} category={p.category} />
-                     ))}
-                   </div>
-                 </section>
-               )
-            })}
+          {/* Product Grid */}
+          <div className="min-h-[50vh]">
+             {filteredProducts.length > 0 ? (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 gap-y-10 animate-fadeUp" key={activeTab}>
+                    {filteredProducts.map((p) => (
+                        <ProductCard key={p.name} name={p.name} category={p.category} />
+                    ))}
+                </div>
+             ) : (
+                 <div className="py-20 text-center text-muted-foreground">
+                    <p>No products found in this category.</p>
+                 </div>
+             )}
           </div>
        </div>
     </div>
