@@ -12,14 +12,27 @@ const sections = [
   { id: "bridal-accessories", title: "Bridal Accessories", desc: "Bridal accessories that complete the look." },
 ] as const
 
+import Image from "next/image"
+
 export default function AccessoriesPage() {
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
        {/* Background Decoration */}
-       <div className="fixed top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 -z-10" />
-       <div className="fixed bottom-0 left-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[120px] translate-y-1/3 -translate-x-1/4 -z-10" />
+       <div className="fixed inset-0 z-0">
+          <Image 
+             src="/accessories_bg.png" 
+             alt="Background Pattern" 
+             fill 
+             className="object-cover opacity-30"
+             priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60" />
+       </div>
+       
+       <div className="fixed top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 z-0" />
+       <div className="fixed bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] translate-y-1/3 -translate-x-1/4 z-0" />
 
-       <div className="container py-12 md:py-20 lg:py-24 space-y-16">
+       <div className="container relative z-10 py-12 md:py-20 lg:py-24 space-y-16">
           {/* Header */}
           <div className="space-y-6 animate-fadeUp">
              <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-charcoal transition-colors">
