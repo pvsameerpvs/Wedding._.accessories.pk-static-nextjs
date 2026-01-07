@@ -1,4 +1,7 @@
 import Image from "next/image"
+import { CustomOrderModal } from "./custom-order-modal"
+import { Button } from "./ui/button"
+import { ArrowRight } from "lucide-react"
 
 export default function HeroSection() {
 
@@ -34,8 +37,24 @@ export default function HeroSection() {
               </p>
            </div>
 
-           
-           
+           <div>
+  <CustomOrderModal>
+  <Button
+    size="lg"
+    variant="ghost"
+    className="text-base w-full sm:w-auto rounded-full
+               bg-transparent shadow-none hover:bg-transparent
+               flex items-center gap-2 px-0
+               font-serif
+               text-[#D9B44A]
+               hover:text-[#D9B44A]
+               hover:translate-x-1 transition-all"
+  >
+    Start Your Custom Project
+    <ArrowRight className="h-5 w-5 text-[#D9B44A]" />
+  </Button>
+</CustomOrderModal>
+</div>
            {/* Stats / Trust Indicators */}
            <div className="pt-8 items-center gap-8 hidden md:flex animate-fadeUp [animation-delay:300ms]">
               <div className="flex -space-x-4">
