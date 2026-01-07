@@ -50,12 +50,10 @@ export default function CtaSection() {
                  </a>
               </Button>
               {/* Secondary Action: Transparent with Border */}
-                <Button asChild size="lg" className="group rounded-full h-16 px-10 text-lg bg-white text-primary hover:bg-primary hover:text-white font-medium shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto">
-                 <a href={waCta} target="_blank" rel="noreferrer" className="flex items-center gap-3">
-                 <Link href="/contact" className="flex items-center gap-2 text-primary group-hover:text-white transition-colors" >
-                    Start Custom Order <ArrowRight className="w-6 h-6 text-primary group-hover:text-white transition-colors"  />
+                <Button asChild size="lg" variant="secondary" className="group rounded-full h-16 px-10 text-lg bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-primary font-medium shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto">
+                 <Link href="/contact" className="flex items-center gap-2">
+                    Start Custom Order <ArrowRight className="w-6 h-6 text-white group-hover:text-primary transition-colors"  />
                  </Link>
-                 </a>
               </Button>
            </div>
            
