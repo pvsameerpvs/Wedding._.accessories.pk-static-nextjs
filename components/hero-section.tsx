@@ -3,111 +3,73 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { SITE } from "@/lib/site"
 import { waLink } from "@/lib/whatsapp"
+import { ArrowRight, Sparkles } from "lucide-react"
 
 export default function HeroSection() {
   const waCta = waLink("Hello! I’d like to place an order from Wedding._.accessories.pk. Please share details.")
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-cream/30">
-      {/* Dynamic Background Elements */}
+    <section className="relative min-h-screen w-full bg-background flex items-center justify-center p-4 lg:p-8">
+      {/* Global Background Texture - Google Style: Subtle, organic */}
       <div className="absolute inset-0 pointer-events-none">
-        <Image 
-          src="/aesthetic-bg.png" 
-          alt="Elegant floral background" 
-          fill 
-          className="object-cover opacity-40 mix-blend-overlay"
-          priority
-        />
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/15 rounded-full blur-[120px] translate-y-1/3 -translate-x-1/4" />
+          <Image 
+            src="/aesthetic-bg.png" 
+            alt="Background Texture" 
+            fill 
+            className="object-cover opacity-30 mix-blend-overlay"
+            priority
+          />
       </div>
 
-      <div className="container relative z-10 py-20 lg:py-0">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
-          {/* Text Content */}
-          <div className="space-y-8 animate-fadeUp">
-            <div className="space-y-4">
-               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/60 border border-white/50 backdrop-blur-sm shadow-sm w-fit">
-                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                  <span className="text-xs font-medium tracking-wide uppercase text-charcoal/70">New Wedding Collection 2024</span>
-               </div>
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-charcoal">
-                Make Your <br/>
-                <span className="italic text-primary-foreground/90">Special Day</span> <br/>
-                Unforgettable.
+      {/* Main Material Container - Surface Container High */}
+      <div className="relative w-full max-w-[1400px] bg-white/40 backdrop-blur-xl rounded-[2.5rem] border border-white/50 shadow-xl overflow-hidden grid lg:grid-cols-2 min-h-[85vh]">
+        
+        {/* Left: Content Surface */}
+        <div className="flex flex-col justify-center p-8 md:p-12 lg:p-16 space-y-10 order-2 lg:order-1 relative z-10">
+           {/* Badge - M3 Tertiary Container */}
+           
+
+           <div className="space-y-6 animate-fadeUp [animation-delay:100ms]">
+              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight text-charcoal">
+                Crafting <br />
+                <span className="text-primary italic">Timeless</span> <br />
+                Memories
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg">
-                 Exquisite handcrafted accessories for your Nikkah, Barat, and Walima. 
-                 Designed to add that perfect touch of elegance to your celebration.
+              <p className="text-lg md:text-xl text-muted-foreground max-w-md leading-relaxed">
+                Premium handcrafted wedding accessories for your special day. Designed with love, delivered with care.
               </p>
-            </div>
+           </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="rounded-full h-14 px-8 text-base shadow-elevated hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
-                <a href={waCta} target="_blank" rel="noreferrer">
-                   Shop on WhatsApp
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full h-14 px-8 text-base border-charcoal/20 hover:bg-white/50 backdrop-blur-sm">
-                <Link href="/accessories">View Collection</Link>
-              </Button>
-            </div>
-
-            <div className="pt-8 flex items-center gap-8 border-t border-charcoal/10">
-               <div>
-                  <p className="font-serif text-3xl text-charcoal">500+</p>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wider">Happy Brides</p>
-               </div>
-               <div className="w-px h-12 bg-charcoal/10" />
-               <div>
-                  <p className="font-serif text-3xl text-charcoal">100%</p>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wider">Handmade</p>
-               </div>
-            </div>
-          </div>
-
-          {/* Hero Visual */}
-          <div className="relative">
-             {/* Main Image Container */}
-             <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-700 ease-out">
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 to-transparent z-10" />
-                {/* Use logo as placeholder if no hero image yet, but styled as a product/mood shot */}
-                 <div className="relative aspect-[3/4] bg-white flex items-center justify-center p-12">
-                    <Image 
-                      src="/logo.svg" 
-                      width={600} 
-                      height={600} 
-                      alt="Wedding Accessories Showcase" 
-                      className="w-full h-auto object-contain drop-shadow-md opacity-90"
-                      priority
-                    />
-                 </div>
-             </div>
-
-             {/* Floating Elements (Glass Cards) */}
-             <div className="absolute -bottom-8 -left-8 z-20 bg-white/80 backdrop-blur-md p-5 rounded-2xl shadow-elevated animate-floaty border border-white/40">
-                <div className="flex items-center gap-4">
-                   <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-xl">🌸</div>
-                   <div>
-                      <p className="font-serif text-lg leading-none">Floral Sets</p>
-                      <p className="text-xs text-muted-foreground">Trending Now</p>
-                   </div>
-                </div>
-             </div>
-
-             <div className="absolute top-10 -right-8 z-20 bg-white/80 backdrop-blur-md p-5 rounded-2xl shadow-elevated animate-floaty [animation-delay:2s] border border-white/40">
-                 <div className="flex items-center gap-4">
-                   <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-xl">✨</div>
-                   <div>
-                      <p className="font-serif text-lg leading-none">Custom Made</p>
-                      <p className="text-xs text-muted-foreground">Just for you</p>
-                   </div>
-                </div>
-             </div>
-          </div>
-
+           
+           
+           {/* Stats / Trust Indicators */}
+           <div className="pt-8 items-center gap-8 hidden md:flex animate-fadeUp [animation-delay:300ms]">
+              <div className="flex -space-x-4">
+                 {[1,2,3].map(i => (
+                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200" /> 
+                 ))}
+                 <div className="w-10 h-10 rounded-full border-2 border-white bg-primary/20 flex items-center justify-center text-xs font-bold text-primary-foreground">+500</div>
+              </div>
+              <p className="text-sm font-medium text-charcoal/80">Happy Brides <br/> Across Pakistan</p>
+           </div>
         </div>
+
+        {/* Right: Visual Surface */}
+        <div className="relative h-[400px] lg:h-auto order-1 lg:order-2 m-4 lg:m-0 rounded-[2rem] lg:rounded-none lg:rounded-l-[2.5rem] overflow-hidden group">
+           <Image 
+              src="/logo.png"
+              alt="Hero Showcase" 
+              fill
+              className="object-contain p-12 lg:p-20 transition-transform duration-700 group-hover:scale-105"
+              priority
+           />
+           {/* Overlay Gradient */}
+           <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-secondary/10 mix-blend-multiply" />
+           
+            {/* Floating Card - M3 Style */}
+          
+        </div>
+
       </div>
     </section>
   )
