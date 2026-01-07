@@ -22,9 +22,9 @@ export const popularProducts: Product[] = [
 ] as const
 
 export const allProducts: Product[] = [
-  { name: "Nikkah booklet with box", category: "Nikkah Essentials", image: "/products/nikkah-booklet.jpg" },
-  { name: "Nikkah certificate & pens", category: "Nikkah Essentials", image: "/products/nikkah-certificate.jpg" },
-  { name: "Nikkah duppatta & bridal veil", category: "Nikkah Essentials", image: "/products/nikkah-veil.jpg" },
+  { name: "Nikkah booklet with box", category: "Nikkah Essentials", image: "/products/nikkah-essentials.jpg" },
+  { name: "Nikkah certificate & pens", category: "Nikkah Essentials", image: "/products/nikkah-essentials.jpg" },
+  { name: "Nikkah duppatta & bridal veil", category: "Nikkah Essentials", image: "/products/nikkah-essentials.jpg" },
 
   { name: "Customized wedding props", category: "Wedding Props & Decor", image: "/products/custom-props.jpg" },
   { name: "Welcome entrance board", category: "Wedding Props & Decor", image: "/products/welcome-board.jpg" },
