@@ -15,7 +15,7 @@ export default function AboutSection() {
             <div className="relative order-2 lg:order-1 animate-fadeUp">
                <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
                   <Image
-                     src="/cat_nikkah_art_1767776001207.png" // Reusing a generated asset if placeholder is boring, or keep placeholder
+                     src="/about_brand_story.png"
                      alt="Our Atelier"
                      fill
                      className="object-cover"
