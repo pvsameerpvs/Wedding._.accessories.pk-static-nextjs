@@ -43,7 +43,6 @@ export default function CustomOrdersPage() {
             className="object-cover opacity-[0.08]" 
             priority
          />
-         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background/95" />
       </div>
 
       <div className="container relative z-10 py-12 md:py-20 lg:py-24 space-y-20">
