@@ -3,35 +3,39 @@
 @tailwind utilities;
 
 :root {
-  --radius: 1.1rem;
+  --radius: 1rem; /* M3 small/medium rounding */
 
-  --background: 38 100% 97%;
-  --foreground: 14 18% 18%;
+  /* Material 3 / Google UI inspired Base Colors (Pastel/Wedding adjusted) */
+  --background: 30 20% 98%; /* Surface */
+  --foreground: 20 10% 15%; /* On Surface */
 
-  --card: 38 100% 98%;
-  --card-foreground: 14 18% 18%;
+  --card: 30 20% 99%; /* Surface Container Low */
+  --card-foreground: 20 10% 15%;
 
-  --popover: 38 100% 98%;
-  --popover-foreground: 14 18% 18%;
+  --popover: 30 20% 99%;
+  --popover-foreground: 20 10% 15%;
 
-  --primary: 349 76% 86%;
-  --primary-foreground: 14 18% 18%;
+  /* Primary: A soft terracotta/rose */
+  --primary: 10 60% 88%; /* Primary Container */
+  --primary-foreground: 10 90% 20%; /* On Primary Container */
 
-  --secondary: 58 83% 80%;
-  --secondary-foreground: 14 18% 18%;
+  /* Secondary: A sage green/nature tone */
+  --secondary: 130 30% 92%; /* Secondary Container */
+  --secondary-foreground: 130 50% 20%; /* On Secondary Container */
 
-  --muted: 37 60% 92%;
-  --muted-foreground: 14 12% 34%;
+  /* Accent/Tertiary: A soft yellow/cream */
+  --accent: 45 60% 90%;
+  --accent-foreground: 45 80% 20%;
 
-  --accent: 123 31% 60%;
-  --accent-foreground: 14 18% 18%;
+  --muted: 30 10% 94%;
+  --muted-foreground: 20 5% 45%;
 
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 98%;
+  --destructive: 0 80% 90%;
+  --destructive-foreground: 0 70% 30%;
 
-  --border: 20 18% 85%;
-  --input: 20 18% 85%;
-  --ring: 349 76% 70%;
+  --border: 30 10% 85%;
+  --input: 30 10% 85%;
+  --ring: 10 60% 80%;
 }
 
 html, body {
@@ -39,11 +43,11 @@ html, body {
 }
 
 body {
-  @apply bg-cream text-charcoal font-sans antialiased;
+  @apply bg-background text-foreground font-sans antialiased;
   background-image:
-    radial-gradient(900px 260px at 10% 0%, rgba(246, 193, 204, 0.35), transparent 60%),
-    radial-gradient(800px 260px at 90% 10%, rgba(247, 231, 162, 0.35), transparent 60%),
-    radial-gradient(900px 300px at 50% 100%, rgba(123, 191, 122, 0.22), transparent 60%);
+    radial-gradient(900px 260px at 10% 0%, hsl(var(--primary) / 0.2), transparent 60%),
+    radial-gradient(800px 260px at 90% 10%, hsl(var(--secondary) / 0.2), transparent 60%),
+    radial-gradient(900px 300px at 50% 100%, hsl(var(--accent) / 0.15), transparent 60%);
   background-attachment: fixed;
 }
 

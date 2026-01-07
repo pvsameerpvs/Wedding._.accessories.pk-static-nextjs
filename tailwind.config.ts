@@ -51,16 +51,17 @@ const config: Config = {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "1.75rem", // Large shapes
+        md: "1rem",    // Medium shapes
+        sm: "0.5rem",  // Small shapes
       },
       fontFamily: {
-        serif: ["var(--font-heading)", "ui-serif", "Georgia", "serif"],
-        sans: ["var(--font-body)", "ui-sans-serif", "system-ui", "sans-serif"]
+        serif: ["var(--font-heading)", "Georgia", "serif"],
+        sans: ["var(--font-body)", "Roboto", "system-ui", "sans-serif"]
       },
       boxShadow: {
-        soft: "0 10px 30px rgba(58, 44, 39, 0.08)"
+        soft: "0 4px 20px -2px rgba(50, 40, 30, 0.08)",
+        elevated: "0 8px 30px -4px rgba(50, 40, 30, 0.12)"
       },
       keyframes: {
         floaty: {

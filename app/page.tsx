@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import SectionHeading from "@/components/section-heading"
+import AboutSection from "@/components/about-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
@@ -110,10 +111,13 @@ export default function HomePage() {
         />
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {popularProducts.map((p) => (
-            <ProductCard key={p.name} name={p.name} category={p.category} tag={p.tag} />
+            <ProductCard key={p.name} category={p.category} tag={p.tag} name={p.name} />
           ))}
         </div>
       </section>
+
+      {/* About Section */}
+      <AboutSection />
 
       {/* Elegant CTA */}
       <section className="container pb-16">
