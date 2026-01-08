@@ -19,7 +19,7 @@ export default function PopularProducts() {
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {popularProducts.map((p, i) => (
           <div key={p.name} className="animate-fadeUp" style={{ animationDelay: `${i * 100}ms` }}>
-             <ProductCard category={p.category} tag={p.tag} name={p.name} />
+             <ProductCard category={p.category} tag={p.tag} name={p.name} image={p.image} images={p.images} />
           </div>
         ))}
       </div>
