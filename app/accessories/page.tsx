@@ -10,11 +10,15 @@ import { allProducts } from "@/lib/products"
 
 const categories = [
   { id: "all", label: "All Collection" },
-  { id: "nikkah-essentials", label: "Nikkah Essentials" },
-  { id: "wedding-props-decor", label: "Wedding Props" },
-  { id: "ring-ritual-items", label: "Ritual Items" },
-  { id: "favours-gifts", label: "Favours & Gifts" },
-  { id: "bridal-accessories", label: "Bridal Accessories" },
+  { id: "nikkah-stationery", label: "Nikkah Stationery" },
+  { id: "rings-platters", label: "Rings & Platters" },
+  { id: "resin-acrylic", label: "Resin & Acrylic" },
+  { id: "wedding-rituals", label: "Wedding Rituals" },
+  { id: "gift-boxes", label: "Gift Boxes & Mehar" },
+  { id: "dupatta-veils", label: "Dupatta & Veils" },
+  { id: "props-decor", label: "Props & Decor" },
+  { id: "sweets-favours", label: "Sweets & Favours" },
+  { id: "floral-garlands", label: "Floral & Garlands" },
 ] as const
 
 export default function AccessoriesPage() {
@@ -26,11 +30,15 @@ export default function AccessoriesPage() {
     : allProducts.filter(p => {
         // Match existing category logic
         const catMap: Record<string, string> = {
-            "nikkah-essentials": "Nikkah Essentials",
-            "wedding-props-decor": "Wedding Props & Decor",
-            "ring-ritual-items": "Ring & Ritual Items",
-            "favours-gifts": "Favours & Gifts",
-            "bridal-accessories": "Bridal Accessories"
+            "nikkah-stationery": "Nikkah Stationery & Documentation",
+            "rings-platters": "Rings & Platter Accessories",
+            "resin-acrylic": "Resin & Acrylic Products",
+            "wedding-rituals": "Wedding Ritual Items",
+            "gift-boxes": "Gift Boxes & Mehar Items",
+            "dupatta-veils": "Dupatta & Veil Collection",
+            "props-decor": "Props & Decorative Accessories",
+            "sweets-favours": "Sweets & Favours",
+            "floral-garlands": "Floral & Garlands",
         }
         return p.category === catMap[activeTab]
     })
