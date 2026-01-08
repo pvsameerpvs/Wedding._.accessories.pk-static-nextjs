@@ -28,10 +28,10 @@ export default function FeaturedCategories() {
            
            // Image Mapping
            const bgImages = [
-              "/categories/nikkah.png",
-              "/categories/barat.png",
-              "/categories/walima.png",
-              "/categories/custom.png"
+              "/categories/nikkah.jpeg",
+              "/categories/barat.jpeg",
+              "/categories/walima.jpeg",
+              "/categories/custom.jpeg"
            ]
 
            return (
