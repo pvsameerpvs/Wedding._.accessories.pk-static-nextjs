@@ -22,7 +22,7 @@ export function ProductGalleryModal({ isOpen, onClose, product }: ProductGallery
     ...(product.image ? [product.image] : []),
     ...(product.images || [])
   ]
-  const uniqueImages = Array.from(new Set(allImages)).slice(0, 4) // Remove duplicates and limit to max 4 images
+  const uniqueImages = Array.from(new Set(allImages)) // Remove duplicates
 
   const [currentIndex, setCurrentIndex] = useState(0)
 
