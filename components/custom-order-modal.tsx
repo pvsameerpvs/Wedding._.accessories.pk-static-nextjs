@@ -48,7 +48,7 @@ Please guide me through the design process.`
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] border-none shadow-2xl bg-white/95 backdrop-blur-xl rounded-[2rem]">
+      <DialogContent className="w-[95vw] max-h-[90vh] overflow-y-auto sm:max-w-[425px] border-none shadow-2xl bg-white/95 backdrop-blur-xl rounded-[1.5rem] sm:rounded-[2rem]">
         <DialogHeader className="space-y-3 pb-4 border-b border-border/40">
            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto">
               <Palette className="w-6 h-6" />

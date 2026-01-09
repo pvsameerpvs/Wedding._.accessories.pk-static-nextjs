@@ -27,7 +27,7 @@ export const popularProducts: Product[] = [
       "/products/product.png"
     ] 
   },
-  { name: "Resin ring & thumb plaque", category: "Resin & Acrylic Products", tag: "Trending", image: "/products/ring-plate.jpeg", images: ["/products/ring-plate.jpeg"] },
+  { name: "Resin ring & thumb plaque", category: "Resin & Acrylic Products", tag: "Trending", image: "/products/ring-plate.jpeg", images: ["/products/ring-plate.jpeg","/products/engagement-ring-plate2.jpeg","/products/engagement-ring-plate3.jpeg","/products/engagement-ring-plate4.jpeg","/products/engagement-ring-plate5.jpeg"] },
   { name: "Premium Nikkah box set", category: "Gift Boxes & Mehar Items", tag: "Premium", image: "/products/nikkah-box-set.jpeg", images: ["/products/nikkah-box-set.jpeg"] },
   { name: "Customized wedding props", category: "Props & Decorative Accessories", tag: "Custom", image: "/products/customized-printed-props1.jpeg", images: ["/products/customized-printed-props2.jpeg"] },
   { name: "Bridal veil", category: "Dupatta & Veil Collection", tag: "New", image: "/products/bridal-veil1.jpeg", images: ["/products/bridal-veil1.jpeg", "/products/bridal-veil2.jpeg"] },

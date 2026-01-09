@@ -44,11 +44,11 @@ export function ProductGalleryModal({ isOpen, onClose, product }: ProductGallery
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-w-4xl p-0 overflow-hidden bg-black/95 border-none text-white">
+      <DialogContent className="w-[95vw] max-w-4xl p-0 overflow-hidden bg-black/95 border-none text-white rounded-xl md:rounded-lg">
         <VisuallyHidden>
           <DialogTitle>{product.name}</DialogTitle>
         </VisuallyHidden>
-        <div className="relative flex flex-col md:flex-row h-[80vh] md:h-[600px]">
+        <div className="relative flex flex-col md:flex-row h-[85vh] md:h-[600px]">
           
           {/* Close Button Mobile (absolute) */}
           <button onClick={onClose} className="absolute top-4 right-4 z-50 p-2 bg-black/50 rounded-full md:hidden">
@@ -56,7 +56,7 @@ export function ProductGalleryModal({ isOpen, onClose, product }: ProductGallery
           </button>
 
           {/* Image Section */}
-          <div className="relative flex-1 bg-black flex items-center justify-center">
+          <div className="relative h-[40%] md:h-full md:flex-1 bg-black flex items-center justify-center bg-dots">
              {showNavigation && (
                 <>
                    <button onClick={prevImage} className="absolute left-4 z-10 p-2 hover:bg-white/10 rounded-full transition-colors">
@@ -68,7 +68,7 @@ export function ProductGalleryModal({ isOpen, onClose, product }: ProductGallery
                 </>
              )}
              
-             <div className="relative w-full h-full">
+             <div className="relative w-full h-full p-4">
                 {uniqueImages.length > 0 ? (
                    <Image 
                       src={currentImageSrc} 
@@ -90,9 +90,9 @@ export function ProductGalleryModal({ isOpen, onClose, product }: ProductGallery
           </div>
 
           {/* Details Sidebar */}
-          <div className="w-full md:w-80 bg-white text-charcoal p-6 md:p-8 flex flex-col h-full overflow-y-auto">
+          <div className="w-full md:w-80 bg-white text-charcoal p-6 md:p-8 flex flex-col h-[60%] md:h-full overflow-y-auto">
              <div className="flex justify-between items-start">
-                <h2 className="font-serif text-2xl md:text-3xl leading-tight mb-2">{product.name}</h2>
+                <h2 className="font-serif text-2xl md:text-3xl leading-tight mb-2 pr-8 md:pr-0">{product.name}</h2>
                 <button onClick={onClose} className="hidden md:block p-1 hover:bg-gray-100 rounded-full transition-colors">
                    <X className="w-6 h-6 text-charcoal/50" />
                 </button>
