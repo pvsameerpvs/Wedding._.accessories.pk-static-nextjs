@@ -1,4 +1,5 @@
-import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
+import { VisuallyHidden } from "@/components/ui/visually-hidden"
 import Image from "next/image"
 import { useState } from "react"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
@@ -44,6 +45,9 @@ export function ProductGalleryModal({ isOpen, onClose, product }: ProductGallery
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-4xl p-0 overflow-hidden bg-black/95 border-none text-white">
+        <VisuallyHidden>
+          <DialogTitle>{product.name}</DialogTitle>
+        </VisuallyHidden>
         <div className="relative flex flex-col md:flex-row h-[80vh] md:h-[600px]">
           
           {/* Close Button Mobile (absolute) */}
