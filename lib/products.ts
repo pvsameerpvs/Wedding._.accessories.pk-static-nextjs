@@ -29,9 +29,9 @@ export const popularProducts: Product[] = [
   },
   { name: "Resin ring & thumb plaque", category: "Resin & Acrylic Products", tag: "Trending", image: "/products/ring-plate.jpeg", images: ["/products/ring-plate.jpeg"] },
   { name: "Premium Nikkah box set", category: "Gift Boxes & Mehar Items", tag: "Premium", image: "/products/nikkah-box-set.jpeg", images: ["/products/nikkah-box-set.jpeg"] },
-  { name: "Customized wedding props", category: "Props & Decorative Accessories", tag: "Custom", image: "/products/nikkah-essentials.jpg", images: ["/products/nikkah-essentials.jpg"] },
-  { name: "Bridal veil", category: "Dupatta & Veil Collection", tag: "New", image: "/products/bridal-veil.jpeg", images: ["/products/bridal-veil.jpeg"] },
-  { name: "Artificial garlands", category: "Floral & Garlands", tag: "Elegant", image: "/products/nikkah-essentials.jpg", images: ["/products/nikkah-essentials.jpg"] },
+  { name: "Customized wedding props", category: "Props & Decorative Accessories", tag: "Custom", image: "/products/customized-printed-props1.jpeg", images: ["/products/customized-printed-props2.jpeg"] },
+  { name: "Bridal veil", category: "Dupatta & Veil Collection", tag: "New", image: "/products/bridal-veil1.jpeg", images: ["/products/bridal-veil1.jpeg", "/products/bridal-veil2.jpeg"] },
+  { name: "Artificial garlands", category: "Floral & Garlands", tag: "Elegant", image: "/products/Artificial-garlands1.jpeg", images: ["/products/Artificial-garlands2.jpeg", "/products/Artificial-garlands3.jpeg"] },
 ] as const
 
 export const allProducts: Product[] = [
