@@ -98,7 +98,7 @@ export const allProducts: Product[] = [
   { name: "Printed props", category: "Props & Decorative Accessories", image: "/products/printed-props1.jpeg", images: ["/products/printed-props1.jpeg"] },
   { name: "Bride to be props", category: "Props & Decorative Accessories", image: "/products/bride-to-be-props1.jpeg", images: ["/products/bride-to-be-props1.jpeg"] },
   { name: "Welcome board", category: "Props & Decorative Accessories", image: "/products/welcome-board1.jpeg", images: ["/products/welcome-board2.jpeg", "/products/welcome-board3.jpeg", "/products/welcome-board4.jpeg", "/products/welcome-board5.jpeg"] },
-  { name: "Velvet props", category: "Props & Decorative Accessories", image: "/products/velvet-props1.jpeg", images: ["/products/velvet-props2.jpeg","/products/velvet-props3.jpeg","/products/velvet-props4.jpeg"] },
+  { name: "Velvet props", category: "Props & Decorative Accessories", image: "/products/velvet-props2.jpeg", images: ["/products/velvet-props1.jpeg","/products/velvet-props3.jpeg","/products/velvet-props4.jpeg"] },
 
   // Sweets & Favours
   { name: "Chocolate favours card", category: "Sweets & Favours", image: "/products/chocolate-cards1.jpeg", images: ["/products/chocolate-cards2.jpeg", "/products/chocolate-cards3.jpeg", "/products/chocolate-cards4.jpeg", "/products/chocolate-cards5.jpeg","/products/chocolate-cards5.jpeg"] },
