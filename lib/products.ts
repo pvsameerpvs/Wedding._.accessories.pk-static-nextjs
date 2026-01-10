@@ -12,6 +12,7 @@ export const featuredCategories = [
   { title: "Rings & Platters", href: "/accessories?category=rings-platters", desc: "Customized ring plates & resin works.", image: "/products/ring-plaque.jpeg" },
   { title: "Wedding Rituals", href: "/accessories?category=wedding-rituals", desc: "Doodh pilai glasses & tradition essentials.", image: "/products/doodhpilai.jpeg" },
   { title: "Dupatta & Veils", href: "/accessories?category=dupatta-veils", desc: "Embroidered nikkah dupattas & bridal veils.", image: "/products/bridal-veil.jpeg" },
+  { title: "Other Accessories", href: "/accessories?category=others", desc: "Unique gifts, invitations & miscellaneous items.", image: "/products/new-born-baby-frame.jpeg" },
 ] as const
 
 export const popularProducts: Product[] = [
@@ -117,4 +118,15 @@ export const allProducts: Product[] = [
   { name: "Customized gajry", category: "Floral & Garlands", image: "/products/customized-gajry1.jpeg", images: ["/products/customized-gajry2.jpeg"] },
   { name: "Artificial garlands", category: "Floral & Garlands", image: "/products/Artificial-garlands1.jpeg", images: ["/products/Artificial-garlands2.jpeg", "/products/Artificial-garlands3.jpeg", "/products/Artificial-garlands4.jpeg", "/products/Artificial-garlands5.jpeg"] },
   { name: "Artificial flowers bouquet", category: "Floral & Garlands", image: "/products/Artificial-flowers-bouquet1.jpeg", images: ["/products/Artificial-flowers-bouquet2.jpeg", "/products/Artificial-flowers-bouquet3.jpeg", "/products/Artificial-flowers-bouquet4.jpeg", "/products/Artificial-flowers-bouquet5.jpeg"] },
+
+  // Others
+  { name: "New born baby frame", category: "Others", image: "/products/new-born-baby-frame.jpeg" },
+  { name: "Rasme surma dani", category: "Others", image: "/products/rasme-surma-dani.jpeg" },
+  { name: "Invitation card", category: "Others", image: "/products/invitation-card.jpeg" },
+  { name: "Black invitation with box", category: "Others", image: "/products/black-invitation-box.jpeg" },
+  { name: "Resin couple frame", category: "Others", image: "/products/resin-couple-frame.jpeg" },
+  { name: "Rasm-e-Surma", category: "Others", image: "/products/rasm-e-surma.jpeg" },
+  { name: "Umrah Package", category: "Others", image: "/products/umrah-package.jpeg" },
+  { name: "Bid boxes", category: "Others", image: "/products/bid-boxes.jpeg" },
+  { name: "Bid Matki", category: "Others", image: "/products/bid-matki.jpeg" },
 ] as const

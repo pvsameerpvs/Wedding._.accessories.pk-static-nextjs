@@ -21,15 +21,18 @@ export default function FeaturedCategories() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 p-4">
         {featuredCategories.map((c, i) => {
            const isLarge = i === 0 || i === 3
-           const gridClass = isLarge 
-              ? "lg:col-span-8 lg:row-span-2 min-h-[500px]" 
-              : "lg:col-span-4 lg:row-span-1 min-h-[300px]"
+           const isFull = i === 4
+           
+           let gridClass = "lg:col-span-4 lg:row-span-1 min-h-[300px]"
+           if (isLarge) gridClass = "lg:col-span-8 lg:row-span-2 min-h-[500px]"
+           if (isFull) gridClass = "lg:col-span-12 lg:row-span-2 min-h-[400px]"
            
            const bgImages = [
               "/categories/nikkah.jpeg",
               "/categories/barat.jpeg",
               "/categories/walima.jpeg",
-              "/categories/custom.jpeg"
+              "/categories/custom.jpeg",
+              "/products/new-born-baby-frame.jpeg" // Default for 5th category "Others"
            ]
 
            return (
