@@ -18,15 +18,13 @@ export default function FeaturedCategories() {
          <div className="w-24 h-1 bg-charcoal/10 mx-auto rounded-full mt-4" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 auto-rows-[300px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 p-4">
         {featuredCategories.map((c, i) => {
-           // Asymmetrical Grid Logic
            const isLarge = i === 0 || i === 3
            const gridClass = isLarge 
-              ? "lg:col-span-8 lg:row-span-2" 
-              : "lg:col-span-4 lg:row-span-1"
+              ? "lg:col-span-8 lg:row-span-2 min-h-[500px]" 
+              : "lg:col-span-4 lg:row-span-1 min-h-[300px]"
            
-           // Image Mapping
            const bgImages = [
               "/categories/nikkah.jpeg",
               "/categories/barat.jpeg",
@@ -39,47 +37,44 @@ export default function FeaturedCategories() {
                key={c.href} 
                href={c.href} 
                className={cn(
-                  "group relative rounded-[2.5rem] overflow-hidden border border-white/20 shadow-sm hover:shadow-xl transition-all duration-500 bg-white",
+                  "group relative overflow-hidden rounded-[2rem] transition-all duration-500 hover:shadow-soft border border-white/60 bg-cream/20",
                   gridClass
                )}
             >
-               {/* Background Image - Art Gallery Style */}
+               {/* Background Image */}
                <div className="absolute inset-0">
                   <Image 
                      src={bgImages[i]} 
                      alt={c.title} 
                      fill 
-                     className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-90"
+                     className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-95"
                   />
-                  <div className="absolute inset-0 bg-black/10 mix-blend-multiply" />
+                  {/* Soft Light Overlay instead of Dark */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-cream/90 via-cream/20 to-transparent opacity-80 group-hover:opacity-90 transition-all duration-500" />
                </div>
                
-               {/* Content Overlay */}
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/40 to-black/10 transition-opacity" />
-
-               <div className="relative h-full flex flex-col justify-between p-8 z-20">
-                  <div className="flex justify-between items-start">
-                     <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 group-hover:bg-white group-hover:text-charcoal transition-all duration-300">
-                        <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+               {/* Content - Pastel & Elegant */}
+               <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10 z-20">
+                  <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                     <span className="inline-block px-3 py-1 rounded-full bg-white/40 backdrop-blur-sm border border-white/40 text-xs font-medium tracking-widest uppercase text-charcoal/70 mb-3">
+                        Collection 0{i + 1}
                      </span>
-                     <span className="font-serif italic text-5xl md:text-7xl text-white/10 pointer-events-none select-none">
-                        0{i + 1}
-                     </span>
-                  </div>
-                  
-                  <div className="transform group-hover:-translate-y-2 transition-transform duration-300">
-                     <h3 
-                        className={cn(
-                           "font-serif font-bold bg-clip-text text-transparent bg-cover bg-center transition-all duration-300",
-                           isLarge ? "text-5xl md:text-7xl" : "text-4xl md:text-5xl"
-                        )}
-                        style={{ backgroundImage: `url(${bgImages[i]})` }}
-                     >
+                     
+                     <h3 className={cn(
+                        "font-serif text-charcoal leading-none transition-all duration-300",
+                        isLarge ? "text-5xl md:text-6xl" : "text-3xl md:text-4xl"
+                     )}>
                         {c.title}
                      </h3>
-                     <p className="text-white/90 mt-2 font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity delay-100 shadow-sm">
-                        {c.desc}
-                     </p>
+                     
+                     <div className="flex items-center justify-between mt-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 delay-100">
+                        <p className="text-charcoal/80 font-medium italic font-serif text-lg">
+                           View Gallery
+                        </p>
+                        <span className="w-10 h-10 rounded-full bg-white shadow-soft flex items-center justify-center text-primary transform group-hover:rotate-45 transition-transform duration-500">
+                           <ArrowUpRight className="w-5 h-5" />
+                        </span>
+                     </div>
                   </div>
                </div>
             </Link>
