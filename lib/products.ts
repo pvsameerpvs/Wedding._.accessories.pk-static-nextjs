@@ -39,8 +39,8 @@ export const allProducts: Product[] = [
 // Nikkah Stationery & Documentation
   { name: "Nikkah pens", category: "Nikkah Stationery & Documentation", image: "/products/nikkah-pens1.jpeg", images: ["/products/nikkah-pens2.jpeg", "/products/nikkah-pens3.jpeg", "/products/nikkah-pens4.jpeg", "/products/nikkah-pens5.jpeg"] },
   { name: "Luxury Nikkah pens", category: "Nikkah Stationery & Documentation", image: "/products/nikkah-pens4.jpeg", images: ["/products/luxury-nikkah-pens1.jpeg", "/products/luxury-nikkah-pens2.jpeg", "/products/luxury-nikkah-pens3.jpeg", "/products/luxury-nikkah-pens4.jpeg"] },
-  { name: "Nikkah booklet", category: "Nikkah Stationery & Documentation", image: "/products/nikkah-booklet2.jpeg", images: ["/products/nikkah-booklet1.jpeg", "/products/nikkah-booklet3.jpeg", "/products/nikkah-booklet4.jpeg", "/products/nikkah-booklet5.jpeg"] },
-  { name: "Luxury Nikkah booklet with box", category: "Nikkah Stationery & Documentation", image: "/products/luxury-nikkah-booklet-with-box1.jpeg", images: ["/products/luxury-nikkah-booklet-with-box2.jpeg", "/products/luxury-nikkah-booklet-with-box3.jpeg", "/products/luxury-nikkah-booklet-with-box4.jpeg", "/products/luxury-nikkah-booklet-with-box5.jpeg", "/products/luxury-nikkah-booklet-with-box6.jpeg", "/products/luxury-nikkah-booklet-with-box7.jpeg", "/products/luxury-nikkah-booklet-with-box8.jpeg", "/products/luxury-nikkah-booklet-with-box9.jpeg", "/products/luxury-nikkah-booklet-with-box10.jpeg"] },
+  { name: "Nikkah booklet", category: "Nikkah Stationery & Documentation", image: "/products/nikkah-booklet2.jpeg", images: ["/products/nikkah-booklet1.jpeg", "/products/nikkah-booklet3.jpeg", "/products/nikkah-booklet4.jpeg"] },
+  { name: "Luxury Nikkah booklet with box", category: "Nikkah Stationery & Documentation", image: "/products/luxury-nikkah-booklet-with-box1.jpeg", images: ["/products/luxury-nikkah-booklet-with-box2.jpeg", "/products/luxury-nikkah-booklet-with-box3.jpeg", "/products/luxury-nikkah-booklet-with-box4.jpeg", "/products/luxury-nikkah-booklet-with-box5.jpeg", "/products/luxury-nikkah-booklet-with-box6.jpeg", "/products/luxury-nikkah-booklet-with-box7.jpeg", "/products/luxury-nikkah-booklet-with-box8.jpeg", "/products/luxury-nikkah-booklet-with-box9.jpeg"] },
   { name: "Nikkah certificate", category: "Nikkah Stationery & Documentation", image: "/products/Nikkah certificate1.jpeg", images: ["/products/Nikkah certificate2.jpeg", "/products/Nikkah certificate3.jpeg", "/products/Nikkah certificate4.jpeg", "/products/Nikkah certificate5.jpeg"] },
   { name: "Invitation card with box", category: "Nikkah Stationery & Documentation", image: "/products/nikkah-invitation-card.jpeg", images: ["/products/nikkah-invitation-card.jpeg", "/products/nikkah-invitation-card.jpeg", "/products/nikkah-invitation-card.jpeg", "/products/nikkah-invitation-card.jpeg"] },
   { name: "Nikkah deal", category: "Nikkah Stationery & Documentation", image: "/products/Nikkah-deal1.jpeg" },
@@ -100,17 +100,17 @@ export const allProducts: Product[] = [
   { name: "Welcome board", category: "Props & Decorative Accessories", image: "/products/welcome-board1.jpeg", images: ["/products/welcome-board2.jpeg", "/products/welcome-board3.jpeg", "/products/welcome-board4.jpeg", "/products/welcome-board5.jpeg"] },
   { name: "Velvet props", category: "Props & Decorative Accessories", image: "/products/velvet-props1.jpeg", images: ["/products/velvet-props2.jpeg","/products/velvet-props3.jpeg","/products/velvet-props4.jpeg"] },
 
-  // Sweets & Edibles
-  { name: "Chocolate favours card", category: "Sweets & Edibles", image: "/products/chocolate-cards1.jpeg", images: ["/products/chocolate-cards2.jpeg", "/products/chocolate-cards3.jpeg", "/products/chocolate-cards4.jpeg", "/products/chocolate-cards5.jpeg","/products/chocolate-cards5.jpeg"] },
-  { name: "Customized sweets toppers", category: "Sweets & Edibles", image: "/products/sweets-toppers1.jpeg", images: ["/products/sweets-toppers2.jpeg", "/products/sweets-toppers3.jpeg", "/products/sweets-toppers4.jpeg", "/products/sweets-toppers5.jpeg"] },
-  { name: "Pan masala cones", category: "Sweets & Edibles", image: "/products/pan-masala-cones1.jpeg", images: ["/products/pan-masala-cones3.jpeg", "/products/pan-masala-cones4.jpeg"] },
-  { name: "Shahi mewa card", category: "Sweets & Edibles", image: "/products/shahi-mewa-card.jpeg", images: ["/products/shahi-mewa-card.jpeg"] },
+  // Sweets & Favours
+  { name: "Chocolate favours card", category: "Sweets & Favours", image: "/products/chocolate-cards1.jpeg", images: ["/products/chocolate-cards2.jpeg", "/products/chocolate-cards3.jpeg", "/products/chocolate-cards4.jpeg", "/products/chocolate-cards5.jpeg","/products/chocolate-cards5.jpeg"] },
+  { name: "Customized sweets toppers", category: "Sweets & Favours", image: "/products/sweets-toppers1.jpeg", images: ["/products/sweets-toppers2.jpeg", "/products/sweets-toppers3.jpeg", "/products/sweets-toppers4.jpeg", "/products/sweets-toppers5.jpeg"] },
+  { name: "Pan masala cones", category: "Sweets & Favours", image: "/products/pan-masala-cones1.jpeg", images: ["/products/pan-masala-cones3.jpeg", "/products/pan-masala-cones4.jpeg"] },
+  { name: "Shahi mewa card", category: "Sweets & Favours", image: "/products/shahi-mewa-card.jpeg", images: ["/products/shahi-mewa-card.jpeg"] },
 
   // Wedding Favours
-  { name: "Bangles favour", category: "Wedding Favours", image: "/products/bangles-favour.jpeg", images: ["/products/bangles-favour.jpeg"] },
-  { name: "Glasses", category: "Wedding Favours", image: "/products/glasses1.jpeg", images: ["/products/glasses2.jpeg", "/products/glasses3.jpeg", "/products/glasses4.jpeg", "/products/glasses5.jpeg"] },
-  { name: "Tasbeeh card", category: "Wedding Favours", image: "/products/tasbeeh-card1.jpeg", images: ["/products/tasbeeh-card2.jpeg", "/products/tasbeeh-card3.jpeg"] },
-  { name: "Surah Yaseen favours", category: "Wedding Favours", image: "/products/surah-yaseen-favours1.jpeg", images: ["/products/surah-yaseen-favours2.jpeg"] },
+  { name: "Bangles favour", category: "Sweets & Favours", image: "/products/bangles-favour.jpeg", images: ["/products/bangles-favour.jpeg"] },
+  { name: "Glasses", category: "Sweets & Favours", image: "/products/glasses1.jpeg", images: ["/products/glasses2.jpeg", "/products/glasses3.jpeg", "/products/glasses4.jpeg", "/products/glasses5.jpeg"] },
+  { name: "Tasbeeh card", category: "Sweets & Favours", image: "/products/tasbeeh-card1.jpeg", images: ["/products/tasbeeh-card2.jpeg", "/products/tasbeeh-card3.jpeg"] },
+  { name: "Surah Yaseen favours", category: "Sweets & Favours", image: "/products/surah-yaseen-favours1.jpeg", images: ["/products/surah-yaseen-favours2.jpeg"] },
 
   // Floral & Garlands
   { name: "Artificial gajry", category: "Floral & Garlands", image: "/products/artificial-gajry1.jpeg", images: ["/products/artificial-gajry2.jpeg", "/products/artificial-gajry3.jpeg", "/products/artificial-gajry4.jpeg", "/products/artificial-gajry5.jpeg"] },
