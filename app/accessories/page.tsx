@@ -1,9 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useState, Suspense } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
+import { useSearchParams } from "next/navigation"
 import { cn } from "@/lib/utils"
 import ProductCard from "@/components/product-card"
 import { allProducts } from "@/lib/products"
@@ -21,8 +22,10 @@ const categories = [
   { id: "floral-garlands", label: "Floral & Garlands" },
 ] as const
 
-export default function AccessoriesPage() {
-  const [activeTab, setActiveTab] = useState("all")
+function AccessoriesContent() {
+  const searchParams = useSearchParams()
+  const categoryParam = searchParams.get("category")
+  const [activeTab, setActiveTab] = useState(categoryParam && categories.some(c => c.id === categoryParam) ? categoryParam : "all")
 
   // Filter logic
   const filteredProducts = activeTab === "all" 
@@ -110,4 +113,12 @@ export default function AccessoriesPage() {
        </div>
     </div>
   )
+}
+
+export default function AccessoriesPage() {
+   return (
+      <Suspense fallback={<div className="min-h-screen bg-background" />}>
+         <AccessoriesContent />
+      </Suspense>
+   )
 }

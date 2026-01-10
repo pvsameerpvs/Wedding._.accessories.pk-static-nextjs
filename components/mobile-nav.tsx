@@ -40,6 +40,7 @@ export function MobileNav() {
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="pr-0 bg-[#FFFDF7]">
+        <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
         <div className="px-7">
            <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
               <Brand />

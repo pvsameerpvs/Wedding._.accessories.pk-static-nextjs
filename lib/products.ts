@@ -8,10 +8,10 @@ export type Product = {
 }
 
 export const featuredCategories = [
-  { title: "Nikkah Stationery", href: "/accessories#nikkah-stationery-documentation", desc: "Luxury Nikkah pens, booklets & certificates.", image: "/products/nikkah-pens4.jpeg" },
-  { title: "Rings & Platters", href: "/accessories#rings-platter-accessories", desc: "Customized ring plates & resin works.", image: "/products/ring-plaque.jpeg" },
-  { title: "Wedding Rituals", href: "/accessories#wedding-ritual-items", desc: "Doodh pilai glasses & tradition essentials.", image: "/products/doodhpilai.jpeg" },
-  { title: "Dupatta & Veils", href: "/accessories#dupatta-veil-collection", desc: "Embroidered nikkah dupattas & bridal veils.", image: "/products/bridal-veil.jpeg" },
+  { title: "Nikkah Stationery", href: "/accessories?category=nikkah-stationery", desc: "Luxury Nikkah pens, booklets & certificates.", image: "/products/nikkah-pens4.jpeg" },
+  { title: "Rings & Platters", href: "/accessories?category=rings-platters", desc: "Customized ring plates & resin works.", image: "/products/ring-plaque.jpeg" },
+  { title: "Wedding Rituals", href: "/accessories?category=wedding-rituals", desc: "Doodh pilai glasses & tradition essentials.", image: "/products/doodhpilai.jpeg" },
+  { title: "Dupatta & Veils", href: "/accessories?category=dupatta-veils", desc: "Embroidered nikkah dupattas & bridal veils.", image: "/products/bridal-veil.jpeg" },
 ] as const
 
 export const popularProducts: Product[] = [

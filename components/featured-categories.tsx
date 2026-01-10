@@ -55,26 +55,29 @@ export default function FeaturedCategories() {
                </div>
                
                {/* Content Overlay */}
-               <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-charcoal/40 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                  <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/40 to-black/10 transition-opacity" />
 
                <div className="relative h-full flex flex-col justify-between p-8 z-20">
                   <div className="flex justify-between items-start">
-                     <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/30 backdrop-blur-md text-charcoal border border-white/40 group-hover:bg-white group-hover:scale-110 transition-all duration-300">
+                     <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 group-hover:bg-white group-hover:text-charcoal transition-all duration-300">
                         <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
                      </span>
-                     <span className="font-serif italic text-5xl md:text-7xl text-charcoal/5 pointer-events-none select-none">
+                     <span className="font-serif italic text-5xl md:text-7xl text-white/10 pointer-events-none select-none">
                         0{i + 1}
                      </span>
                   </div>
                   
                   <div className="transform group-hover:-translate-y-2 transition-transform duration-300">
-                     <h3 className={cn(
-                        "font-serif text-charcoal group-hover:text-primary transition-colors duration-300",
-                         isLarge ? "text-4xl md:text-5xl" : "text-3xl"
-                     )}>
+                     <h3 
+                        className={cn(
+                           "font-serif font-bold bg-clip-text text-transparent bg-cover bg-center transition-all duration-300",
+                           isLarge ? "text-5xl md:text-7xl" : "text-4xl md:text-5xl"
+                        )}
+                        style={{ backgroundImage: `url(${bgImages[i]})` }}
+                     >
                         {c.title}
                      </h3>
-                     <p className="text-charcoal/80 mt-2 font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity delay-100">
+                     <p className="text-white/90 mt-2 font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity delay-100 shadow-sm">
                         {c.desc}
                      </p>
                   </div>
