@@ -32,7 +32,7 @@ export default function FeaturedCategories() {
               "/categories/barat.jpeg",
               "/categories/walima.jpeg",
               "/categories/custom.jpeg",
-              "/products/new-born-baby-frame.jpeg" // Default for 5th category "Others"
+              "/categories/new-born-baby-frame.png" // Default for 5th category "Others"
            ]
 
            return (
