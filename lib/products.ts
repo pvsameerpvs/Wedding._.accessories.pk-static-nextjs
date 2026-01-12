@@ -5,6 +5,7 @@ export type Product = {
   image?: string // Primary thumbnail
   images?: string[] // Gallery images
   description?: string
+  pdfLink?: string // Optional link to PDF design
 }
 
 export const featuredCategories = [
@@ -74,10 +75,9 @@ export const allProducts: Product[] = [
   { name: "Premium Nikkah box set", category: "Gift Boxes & Mehar Items", image: "/products/premium-nikkah-box-set1.jpeg", images: ["/products/premium-nikkah-box-set2.jpeg", "/products/premium-nikkah-box-set3.jpeg", "/products/premium-nikkah-box-set4.jpeg", "/products/premium-nikkah-box-set5.jpeg"] },
   { name: "Nikkah box", category: "Gift Boxes & Mehar Items", image: "/products/nikkah-box1.jpeg"},
   { name: "Haq mehar envelope", category: "Gift Boxes & Mehar Items", image: "/products/haq-mehar-envelope1.jpeg"},
-  { name: "Haq mehar box", category: "Gift Boxes & Mehar Items", image: "/products/haq-mehar-box1.jpeg", images: ["/products/haq-mehar-box2.jpeg"] },
+  { name: "Haq mehar box", category: "Gift Boxes & Mehar Items", image: "/products/haq-mehar-box1.jpeg", images: ["/products/haq-mehar-box2.jpeg","/products/haq-mehar-box3.jpeg","/products/haq-mehar-box4.jpeg","/products/haq-mehar-box5.jpeg","/products/haq-mehar-box6.jpeg"] },
   { name: "Transparent Haq mehar box", category: "Gift Boxes & Mehar Items", image: "/products/transparent-haq-mehar-box1.jpeg"},
   { name: "Date fix accessories", category: "Gift Boxes & Date fix accessories", image: "/products/date-fix-accessories1.jpeg", images: ["/products/date-fix-accessories2.jpeg", "/products/date-fix-accessories3.jpeg", "/products/date-fix-accessories4.jpeg", "/products/date-fix-accessories5.jpeg"] },
-
   // Dupatta & Veil Collection
   { name: "Rukhsati dupatta", category: "Dupatta & Veil Collection", image: "/products/rukhsati-dupatta1.jpeg", images: ["/products/rukhsati-dupatta2.jpeg"] },
   { name: "Nikkah dupatta", category: "Dupatta & Veil Collection", image: "/products/nikkah-dupatta1.jpeg", images: ["/products/nikkah-dupatta2.jpeg", "/products/nikkah-dupatta3.jpeg"] },
@@ -120,13 +120,15 @@ export const allProducts: Product[] = [
   { name: "Artificial flowers bouquet", category: "Floral & Garlands", image: "/products/Artificial-flowers-bouquet1.jpeg", images: ["/products/Artificial-flowers-bouquet2.jpeg", "/products/Artificial-flowers-bouquet3.jpeg", "/products/Artificial-flowers-bouquet4.jpeg", "/products/Artificial-flowers-bouquet5.jpeg"] },
 
   // Others
-  { name: "New born baby frame", category: "Others", image: "/products/new-born-baby-frame.jpeg" },
-  { name: "Rasme surma dani", category: "Others", image: "/products/rasme-surma-dani.jpeg" },
-  { name: "Invitation card", category: "Others", image: "/products/invitation-card.jpeg" },
-  { name: "Black invitation with box", category: "Others", image: "/products/black-invitation-box.jpeg" },
-  { name: "Resin couple frame", category: "Others", image: "/products/resin-couple-frame.jpeg" },
-  { name: "Rasm-e-Surma", category: "Others", image: "/products/rasm-e-surma.jpeg" },
-  { name: "Umrah Package", category: "Others", image: "/products/umrah-package.jpeg" },
-  { name: "Bid boxes", category: "Others", image: "/products/bid-boxes.jpeg" },
-  { name: "Bid Matki", category: "Others", image: "/products/bid-matki.jpeg" },
+  { name: "New born baby frame", category: "Others", image: "/products/new-born-baby-frame4.jpeg", images: ["/products/new-born-baby-frame1.jpeg","/products/new-born-baby-frame2.jpeg","/products/new-born-baby-frame3.jpeg","/products/new-born-baby-frame1.jpeg","/products/new-born-baby-frame5.jpeg", "/products/new-born-baby-frame6.jpeg", "/products/new-born-baby-frame7.jpeg"] },
+  { name: "Rasme surma dani", category: "Others", image: "/products/rasme-surma-dani.jpeg", images: ["/products/rasme-surma-dani.jpeg"] },
+  { name: "Invitation card", category: "Others", image: "/products/invitation-card3.jpeg", images: ["/products/invitation-card3.jpeg","/products/invitation-card2.jpeg","/products/invitation-card1.jpeg","/products/invitation-card4.jpeg"] },
+  { name: "Black invitation with box", category: "Others", image: "/products/black-invitation-box1.jpeg", images: ["/products/black-invitation-box1.jpeg","/products/black-invitation-box2.jpeg","/products/black-invitation-box3.jpeg","/products/black-invitation-box4.jpeg","/products/black-invitation-box5.jpeg","/products/black-invitation-box6.jpeg","/products/black-invitation-box7.jpeg","/products/black-invitation-box8.jpeg","/products/black-invitation-box9.jpeg"] },
+  { name: "Resin couple frame", category: "Others", image: "/products/resin-couple-frame1.jpeg", images: ["/products/resin-couple-frame2.jpeg"] },
+  { name: "Rasm-e-Surma", category: "Others", image: "/products/rasm-e-surma1.jpeg", images: ["/products/rasm-e-surma2.jpeg"] },
+  { name: "Umrah Package", category: "Others", image: "/products/umrah-package1.jpeg", images: ["/products/umrah-package2.jpeg","/products/umrah-package3.jpeg","/products/umrah-package4.jpeg","/products/umrah-package5.jpeg","/products/umrah-package6.jpeg","/products/umrah-package7.jpeg","/products/umrah-package8.jpeg","/products/umrah-package9.jpeg","/products/umrah-package10.jpeg"] },
+  { name: "Bid matki", category: "Others", image: "/products/bid-matki1.jpeg", images: ["/products/bid-matki2.jpeg","/products/bid-matki3.jpeg","/products/bid-matki4.jpeg","/products/bid-matki5.jpeg","/products/bid-matki6.jpeg"] },
+
+  // Bid Boxes Design
+  { name: "Bid boxes", category: "Bid Boxes Design", image: "/products/bid-boxes1.jpeg",images: ["/products/bid-boxes2.jpeg","/products/bid-boxes3.jpeg","/products/bid-boxes4.jpeg","/products/bid-boxes5.jpeg"], pdfLink: "/products/bid-box-sample.pdf" },
 ] as const

@@ -14,12 +14,14 @@ export default function ProductCard({
   tag,
   image,
   images,
+  pdfLink,
 }: {
   name: string
   category: string
   tag?: string
   image?: string
   images?: string[] // Optional now
+  pdfLink?: string
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const href = waLink(waProductMessage(name))
@@ -81,7 +83,7 @@ export default function ProductCard({
     <ProductGalleryModal 
        isOpen={isModalOpen} 
        onClose={() => setIsModalOpen(false)} 
-       product={{ name, image, images }} 
+       product={{ name, image, images, pdfLink }} 
     />
     </>
   )

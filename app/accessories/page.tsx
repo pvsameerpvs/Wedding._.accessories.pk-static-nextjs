@@ -20,6 +20,7 @@ const categories = [
   { id: "props-decor", label: "Props & Decor" },
   { id: "sweets-favours", label: "Sweets & Favours" },
   { id: "floral-garlands", label: "Floral & Garlands" },
+  { id: "bid-boxes-design", label: "Bid Boxes Design" },
 ] as const
 
 function AccessoriesContent() {
@@ -42,6 +43,7 @@ function AccessoriesContent() {
             "props-decor": "Props & Decorative Accessories",
             "sweets-favours": "Sweets & Favours",
             "floral-garlands": "Floral & Garlands",
+            "bid-boxes-design": "Bid Boxes Design",
         }
         return p.category === catMap[activeTab]
     })
@@ -101,7 +103,7 @@ function AccessoriesContent() {
              {filteredProducts.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 gap-y-10 animate-fadeUp" key={activeTab}>
                     {filteredProducts.map((p) => (
-                        <ProductCard key={p.name} name={p.name} category={p.category} image={p.image} images={p.images} />
+                        <ProductCard key={p.name} name={p.name} category={p.category} image={p.image} images={p.images} pdfLink={p.pdfLink} />
                     ))}
                 </div>
              ) : (

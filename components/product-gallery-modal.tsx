@@ -2,7 +2,7 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
 import { VisuallyHidden } from "@/components/ui/visually-hidden"
 import Image from "next/image"
 import { useState } from "react"
-import { ChevronLeft, ChevronRight, X } from "lucide-react"
+import { ChevronLeft, ChevronRight, X, FileDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { waLink, waProductMessage } from "@/lib/whatsapp"
 
@@ -13,6 +13,7 @@ interface ProductGalleryModalProps {
     name: string
     image?: string
     images?: string[]
+    pdfLink?: string
   }
 }
 
@@ -119,7 +120,15 @@ export function ProductGalleryModal({ isOpen, onClose, product }: ProductGallery
                 )}
              </div>
 
-             <div className="mt-auto pt-6 border-t border-gray-100">
+             <div className="mt-auto pt-6 border-t border-gray-100 space-y-3">
+                {product.pdfLink && (
+                   <Button asChild variant="outline" className="w-full rounded-full h-12 text-base border-primary/20 text-primary hover:bg-primary/5 hover:text-primary transition-all group">
+                      <a href={product.pdfLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 justify-center">
+                         <FileDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+                         Download Design PDF
+                      </a>
+                   </Button>
+                )}
                 <Button asChild className="w-full rounded-full h-12 text-base shadow-lg hover:shadow-xl transition-all">
                    <a href={waHref} target="_blank" rel="noreferrer">
                       Order / Customize Now
